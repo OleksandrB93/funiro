@@ -4,6 +4,7 @@ import ArrowRightIcon from "./icons/ArrowRightIcon";
 
 const SliderSlide = ({
   img,
+  img2x,
   name,
   description,
   price,
@@ -21,13 +22,17 @@ const SliderSlide = ({
         >
           <div>
             <img className={``} src={process.env.PUBLIC_URL + img} alt="name" />
-            <div className="absolute bottom-[7%] right-[4%] bg-white glass-effect py-6 pl-6 maxSm:py-2 maxSm:pl-2  maxSm:w-[200px]">
+            <div className="absolute bottom-[7%] right-[4%] bg-white/70 glass-effect py-6 pl-6 maxSm:py-2 maxSm:pl-2  maxSm:w-[200px]">
               <p className="text-[28px] font-semibold text-gray1 mb-1 maxSm:text-xl">
                 {name}
               </p>
-              <p className="text-[16px] text-gray2 mb-2  maxSm:text-xs">{description}</p>
+              <p className="text-[16px] text-gray2 mb-2  maxSm:text-xs">
+                {description}
+              </p>
               <div className="flex items-center">
-                <p className="text-[20px] font-semibold text-gray1  maxSm:text-sm">{price}</p>
+                <p className="text-[20px] font-semibold text-gray1  maxSm:text-sm">
+                  {price}
+                </p>
                 <button type="button" className="">
                   <ArrowRightIcon />
                 </button>

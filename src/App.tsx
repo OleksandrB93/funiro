@@ -37,35 +37,39 @@ function App() {
         pagination={pagination}
         heroSlides={true}
       />
-      <Features features={features} />
-      <OurProduct ourProduct={ourProduct} />
-      <div className="maxSm:flex-col flex justify-center items-center mx-auto bg-[#FCF8F3] max-w-[1440px]">
-        <Explains />
+      <main className="bg-bgPrimary">
+        <Features features={features} />
+        <OurProduct ourProduct={ourProduct} />
+        <div className="maxSm:flex-col flex justify-center items-center mx-auto bg-gradientEnd max-w-[1440px]">
+          <Explains />
+          <Slider
+            effect={"slide"}
+            slides={explainsSlider}
+            title={"Beautiful rooms inspiraiton"}
+            breackpoints={explainsSliderBreackpoints}
+            autoplay={autoplay}
+            navigation={navigationExplains}
+            arrowNavigation={true}
+            pagination={pagination}
+            explainsSliderBoll={true}
+          />
+        </div>
         <Slider
           effect={"slide"}
-          slides={explainsSlider}
-          title={"Beautiful rooms inspiraiton"}
-          breackpoints={explainsSliderBreackpoints}
+          slides={tipsSlider}
+          title="Tips & Tricks"
+          breackpoints={tipsSliderBreackpoints}
           autoplay={autoplay}
-          navigation={navigationExplains}
+          navigation={navigation}
           arrowNavigation={true}
           pagination={pagination}
-          explainsSliderBoll={true}
+          tipsSliderBool={true}
         />
-      </div>
-      <Slider
-        effect={"slide"}
-        slides={tipsSlider}
-        title="Tips & Tricks"
-        breackpoints={tipsSliderBreackpoints}
-        autoplay={autoplay}
-        navigation={navigation}
-        arrowNavigation={true}
-        pagination={pagination}
-        tipsSliderBool={true}
-      />
-      <MasonryList masonryList={masonryList} />
-      <Footer />
+        <MasonryList masonryList={masonryList} />
+      </main>
+      <footer className="bg-footerBg">
+        <Footer />
+      </footer>
     </>
   );
 }

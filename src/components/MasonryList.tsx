@@ -27,7 +27,7 @@ const MasonryList = ({ masonryList }: MasonryListProps) => {
     };
   }, []);
   return (
-    <div className="max-w-[1440px] m-auto mb-[87px] maxSm:mb-10">
+    <div className="max-w-[1440px] m-auto pb-[87px] maxSm:mb-10">
       <Masonry columns={columns} gap={gap}>
         {masonryList.map(({ id, img }) => (
           <div

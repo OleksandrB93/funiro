@@ -11,8 +11,6 @@ export type SliderSlideProps = {
   id: string;
   img: string;
   img2x?: string;
-  imgLG?: string;
-  imgLG2x?: string;
   name?: string;
   description: string;
   price?: string;

@@ -5,7 +5,7 @@ import TelegaIcon from "./icons/TelegaIcon";
 const Footer = () => {
   return (
     <div className="flex justify-center mx-auto gap-x-[80px] max-w-[1440px] py-[50px] relative maxSm:flex-col maxSm:py-2">
-      <div className="before:absolute before:w-full before:h-[1px] before:bg-gray-200 before:top-0 before:left-0 before:right-0" />
+      <div className="before:absolute before:w-full before:h-[1px] before:bg-gray5 before:top-0 before:left-0 before:right-0" />
       <h2 className="text-2xl text-black font-bold mb-4 hover:text-primary transition-all duration-300 maxSm:text-sm maxSm:block hidden maxSm:text-center">
         Funiro.
       </h2>

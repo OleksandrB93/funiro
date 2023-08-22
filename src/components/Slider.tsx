@@ -36,7 +36,7 @@ const Slider = ({
     <div
       className={`relative ${
         heroSlides &&
-        " pt-[151px] bg-gradient-to-r from-[#F9F1E7] from-60% to-[#FCF8F3] to-40% maxSm:pt-10"
+        " pt-[151px] bg-gradient-to-r from-gradientStart from-60% to-gradientEnd to-40% maxSm:pt-10"
       }
       ${explainsSliderBoll && "pb-[20px]"} 
       ${tipsSliderBool && "pt-[0px]"}`}

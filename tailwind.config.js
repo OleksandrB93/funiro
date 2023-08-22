@@ -16,6 +16,10 @@ module.exports = {
         greenAccent: "rgb(var(--color-greenAccent) / <alpha-value>)",
         greenAccent: "rgb(var(--color-greenAccent) / <alpha-value>)",
         lightBG: "rgb(var(--color-lightBG) / <alpha-value>)",
+        gradientEnd: "rgb(var(--color-gradientEnd) / <alpha-value>)",
+        gradientStart: "rgb(var(--color-gradientStart) / <alpha-value>)",
+        bgPrimary: "rgb(var(--color-bgPrimary) / <alpha-value>)",
+        footerBg: "rgb(var(--color-footerBg) / <alpha-value>)",
       },
       fontFamily: {
         gilroy: ["Gilroy", "sans-serif"],

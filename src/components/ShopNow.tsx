@@ -1,6 +1,6 @@
 const ShopNow = () => {
   return (
-    <div className="maxSm:hidden absolute z-[10] top-[0%] left-[9.5%] p-[60px] max-w-[494px] flex flex-col glass-effect">
+    <div className="maxSm:hidden absolute bg-white/70 z-[10] top-[0%] left-[9.5%] p-[60px] max-w-[494px] flex flex-col glass-effect">
       <h1 className="font-bold text-[55px] text-gray1 mb-4">
         High-Quality Furniture Just For You
       </h1>
