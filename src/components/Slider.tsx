@@ -5,9 +5,11 @@ import "swiper/css/navigation";
 import { Pagination, Autoplay, Navigation } from "swiper/modules";
 import { SliderProps } from "../types";
 import SliderSlide from "./SliderSlide";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import SliderNavigation from "./SliderNavigation";
 import ShopNow from "./ShopNow";
+import ArrowNavExplains from "./icons/ArrowNavExplains";
+import TipsSliderNavigation from "./TipsSliderNavigation";
 
 const Slider = ({
   slides,
@@ -19,6 +21,8 @@ const Slider = ({
   heroSlides,
   navigation,
   pagination,
+  explainsSliderBoll,
+  tipsSliderBool,
 }: SliderProps) => {
   const [canGoNext, setCanGoNext] = useState(true);
   const [canGoPrev, setCanGoPrev] = useState(false);
@@ -27,39 +31,63 @@ const Slider = ({
     setCanGoNext(!swiper.isEnd);
     setCanGoPrev(!swiper.isBeginning);
   };
-  const swiperRef = useRef(null);
 
   return (
-    <div className="relative  bg-gradient-to-r from-[#F9F1E7] from-60% to-[#FCF8F3] to-40% pt-[151px] ">
+    <div
+      className={`relative ${
+        heroSlides &&
+        " pt-[151px] bg-gradient-to-r from-[#F9F1E7] from-60% to-[#FCF8F3] to-40% maxSm:pt-10"
+      }
+      ${explainsSliderBoll && "pb-[20px]"} 
+      ${tipsSliderBool && "pt-[0px]"}`}
+    >
       <h2 className="visually-hidden">{title}</h2>
+      {tipsSliderBool && (
+        <h2 className="text-center  text-[40px] font-bold mt-[44px]">
+          Tips & Tricks
+        </h2>
+      )}
 
       <Swiper
-        className=" w-full relative"
+        className={` w-full relative ${
+          heroSlides && "max-w-[1440px] max-h-[582px]"
+        }
+        ${explainsSliderBoll && "max-w-[875px] maxSm:max-w-[390px]"}
+        ${tipsSliderBool && "max-w-[1285px]"}`}
         modules={[Pagination, Autoplay, Navigation, Pagination]}
         autoplay={autoplay}
         effect={effect}
         breakpoints={breackpoints}
         navigation={arrowNavigation ? navigation : false}
         onSlideChange={handleSlideChange}
-        pagination={{
-          el: ".swiper-pagination2",
-          bulletClass: `swiper-pagination-bullet`,
-          bulletActiveClass: "swiper-pagination-bullet-active",
-          clickable: true,
-        }}
+        pagination={pagination}
       >
         {heroSlides && <ShopNow />}
         {heroSlides && (
-          <div className="swiper-pagination2 min-w-full  translate-y-[-1850%] lg:translate-y-[-2190%] flex justify-center items-center gap-1"></div>
+          <div className="swiper-pagination2 transform translate-y-[-475px]  flex justify-center items-center gap-1"></div>
         )}
-
+        {explainsSliderBoll && (
+          <div className="swiper-pagination2 flex ml-[428px] mt-2 items-center gap-2"></div>
+        )}
+        {tipsSliderBool && (
+          <div className="swiper-pagination2 flex pb-[40px] mt-4 justify-center items-center gap-4"></div>
+        )}
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
-            <SliderSlide {...slide} />
+            <SliderSlide
+              {...slide}
+              explainsSliderBoll={explainsSliderBoll}
+              heroSlides={heroSlides}
+              tipsSliderBool={tipsSliderBool}
+            />
           </SwiperSlide>
         ))}
-        {arrowNavigation && (
+        {arrowNavigation && heroSlides && (
           <SliderNavigation canGoPrev={canGoPrev} canGoNext={canGoNext} />
+        )}
+        {arrowNavigation && explainsSliderBoll && <ArrowNavExplains />}
+        {arrowNavigation && tipsSliderBool && (
+          <TipsSliderNavigation canGoPrev={canGoPrev} canGoNext={canGoNext} />
         )}
       </Swiper>
     </div>

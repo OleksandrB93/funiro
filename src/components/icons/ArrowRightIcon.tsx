@@ -1,7 +1,7 @@
 const ArrowRightIcon = () => {
   return (
     <svg
-    className="ml-[93px] mr-6"
+    className="ml-[93px] mr-6 "
       width="16"
       height="12"
       viewBox="0 0 16 12"

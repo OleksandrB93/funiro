@@ -1,6 +1,7 @@
 const CartIcon = () => {
   return (
     <svg
+      className="hover:bg-primary hover:rounded-full hover:drop-shadow-lg hover:p-1 transition-all duration-300 maxSm:w-9"
       width="24"
       height="24"
       viewBox="0 0 24 24"

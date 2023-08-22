@@ -3,11 +3,15 @@ import HeartIcon from "./icons/HeartIcon";
 
 const HeaderTools = () => {
   return (
-    <div className="flex gap-x-8 justify-center items-center ml-[121px]">
+    <div className="flex gap-x-8 justify-center items-center ml-[121px] maxSm:ml-4 maxSm:gap-x-6">
       <HeartIcon />
       <CartIcon />
       <div>
-        <img className="w-10 h-10" src="/imgs/Avatar.png" alt="" />
+        <img
+          className=" hover:drop-shadow-lg transition duration-300"
+          src={process.env.PUBLIC_URL + "/imgs/Avatar.png"}
+          alt=""
+        />
       </div>
     </div>
   );

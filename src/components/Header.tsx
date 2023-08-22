@@ -26,22 +26,29 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed w-full z-20 ${
-        isScrolled  ? "py-2 shadow-lg" : "py-10"
+      className={`fixed w-full z-20 maxSm:max-w-[390px] ${
+        isScrolled ? "maxSm:py-1 shadow-lg" : "maxSm:py-5 py-10"
       }   backdrop-blur-lg transition-all ease-in-out duration-300`}
     >
-      <div className="flex justify-center items-center mx-[100px]">
-        <Logo />
-        <Navlinks links={navlinks} />
-        <div className="relative">
-          <input
-            className="w-[473px] pl-[44px] py-3"
-            type="text"
-            placeholder="Search for minimalist chair"
-          />
-          <SearchIcon />
+      <div
+        className="flex justify-center items-center mx-[100px]
+      maxSm:flex-col ma"
+      >
+        <div className="flex">
+          <Logo />
+          <Navlinks links={navlinks} />
         </div>
-        <HeaderTools />
+        <div className="flex">
+          <div className="relative">
+            <input
+              className="w-[473px] pl-[44px] py-3 maxSm:w-[200px] maxSm:text-sm maxSm:pl-8"
+              type="text"
+              placeholder="Search for minimalist chair"
+            />
+            <SearchIcon />
+          </div>
+          <HeaderTools />
+        </div>
       </div>
     </header>
   );

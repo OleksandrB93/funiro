@@ -13,15 +13,23 @@ export type SliderSlideProps = {
   img2x?: string;
   imgLG?: string;
   imgLG2x?: string;
-  name: string;
-  discription: string;
-  price: string;
+  name?: string;
+  description: string;
+  price?: string;
+  title?: string;
+  heroSlides?: boolean;
+  isActive?: boolean;
+  explainsSliderBoll?: boolean;
+  tipsSliderBool?: boolean;
+  date?: string;
 };
 
 export interface SliderProps {
   slides: SliderSlideProps[];
   effect?: string;
   heroSlides?: boolean;
+  explainsSliderBoll?: boolean;
+  tipsSliderBool?: boolean;
   title: string;
   breackpoints: any;
   autoplay: any;
@@ -37,4 +45,25 @@ export type FeaturesProps = {
     title: string;
     description: string;
   }[];
+};
+
+export type OurProductProps = {
+  ourProduct: {
+    id: string;
+    img: string;
+    title: string;
+    description: string;
+    price: string;
+    sale: string;
+    bage: string;
+  }[];
+};
+
+export type TipsSliderProps = {
+  tipsTricks: {
+    id: string;
+    img: string;
+    description: string;
+    date: string;
+  };
 };

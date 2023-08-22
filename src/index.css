@@ -84,10 +84,31 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-body {
-  font-family: "Gilroy", sans-serif;
-  width: 100%;
-  margin: 0 auto;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol,
+li,
+form {
+  margin: 0;
+  padding: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .visually-hidden {
