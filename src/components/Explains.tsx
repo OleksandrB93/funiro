@@ -1,6 +1,20 @@
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { slideInFromLeft } from "../configs/configMotion";
+
 const Explains = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+
   return (
-    <div className="w-[564px] flex justify-center items-center maxSm:w-[390px] maxSm:text-center maxSm:mt-[50px]">
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      variants={slideInFromLeft}
+      transition={{ duration: 0.7 }}
+      className="w-[564px] flex justify-center items-center maxSm:w-[390px] maxSm:text-center maxSm:mt-[50px]"
+    >
       <div className="w-[378px]">
         <div className="text-[40px] font-bold mb-2 maxSm:text-2xl">
           <p className="whitespace-nowrap">50+ Beautiful rooms</p> inspiration
@@ -17,7 +31,7 @@ const Explains = () => {
           Explore More
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,4 +1,7 @@
 import HeartWhite from "./icons/HearWhite";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+import { listVAriatns } from "../configs/configMotion";
 
 interface OurProductCardProps {
   ourProduct: {
@@ -10,12 +13,21 @@ interface OurProductCardProps {
     price: string;
     sale: string;
   };
+  i: number;
 }
-const OurProductsCard = ({ ourProduct }: OurProductCardProps) => {
+const OurProductsCard = ({ ourProduct,i }: OurProductCardProps) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+
   return (
-    <li
+    <motion.li
+      ref={ref}
+      variants={listVAriatns}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      custom={i}
       key={ourProduct.id}
-      className="bg-lightBG hover:drop-shadow-md transition-all duration-300 relative group
+      className="bg-lightBG hover:drop-shadow-md relative group
       maxSm:w-[180px]"
     >
       <div className="relative">
@@ -40,10 +52,14 @@ const OurProductsCard = ({ ourProduct }: OurProductCardProps) => {
           <p className="text-2xl text-gray1 font-semibold mb-2 maxSm:text-base">
             {ourProduct.title}
           </p>
-          <p className="text-[16px] text-gray3 maxSm:text-xs">{ourProduct.description}</p>
+          <p className="text-[16px] text-gray3 maxSm:text-xs">
+            {ourProduct.description}
+          </p>
         </div>
         <div className="flex justify-start items-center gap-x-4">
-          <p className="text-xl text-gray1 font-semibold maxSm:text-xs">{ourProduct.price}</p>
+          <p className="text-xl text-gray1 font-semibold maxSm:text-xs">
+            {ourProduct.price}
+          </p>
           <p className="text-[16px] text-gray4 line-through maxSm:text-xs">
             {ourProduct.sale}
           </p>
@@ -74,7 +90,7 @@ const OurProductsCard = ({ ourProduct }: OurProductCardProps) => {
           </div>
         </div>
       </div>
-    </li>
+    </motion.li>
   );
 };
 

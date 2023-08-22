@@ -60,7 +60,7 @@ export const tipsSliderBreackpoints = {
     // centeredSlides: true,
     grabCursor: true,
     slidesPerView: 1,
-    spaceBetween: 10,
+    spaceBetween: 0,
     initialSlide: 1,
   },
   1440: {

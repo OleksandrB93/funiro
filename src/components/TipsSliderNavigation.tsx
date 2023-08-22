@@ -10,7 +10,7 @@ const TipsSliderNavigation = ({
   canGoPrev,
 }: SliderNavigationProps) => {
   return (
-    <div className="">
+    <div className="maxSm:hidden">
       <div
         className={`absolute -left-[-0.5%] top-[48%] rotate-180 swiper-prev z-[100] `}
       >

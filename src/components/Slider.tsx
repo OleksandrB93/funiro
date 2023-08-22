@@ -53,7 +53,7 @@ const Slider = ({
           heroSlides && "max-w-[1440px] max-h-[582px]"
         }
         ${explainsSliderBoll && "max-w-[875px] maxSm:max-w-[390px]"}
-        ${tipsSliderBool && "max-w-[1285px]"}`}
+        ${tipsSliderBool && "max-w-[1285px] maxSm:w-[390px]"}`}
         modules={[Pagination, Autoplay, Navigation, Pagination]}
         autoplay={autoplay}
         effect={effect}
