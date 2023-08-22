@@ -26,7 +26,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed w-full z-20 maxSm:max-w-[390px] ${
+      className={`w-full fixed z-40 ${
         isScrolled ? "maxSm:py-1 shadow-lg" : "maxSm:py-5 py-10"
       }   backdrop-blur-lg transition-all ease-in-out duration-300`}
     >

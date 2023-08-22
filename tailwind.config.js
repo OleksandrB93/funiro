@@ -25,7 +25,7 @@ module.exports = {
         gilroy: ["Gilroy", "sans-serif"],
       },
       screens: {
-        maxSm: { max: "391px" },
+        maxSm: { max: "1440px" },
         sm: "390px",
         // => @media (min-width: 390px)
         lg: "1440px",
