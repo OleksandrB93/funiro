@@ -7,6 +7,11 @@ export const slideInFromRight = {
   visible: { x: "0%" },
 };
 
+export const slideInFromUp = {
+  hidden: { y: "-100%" },
+  visible: { y: "0%" },
+};
+
 export const listVAriatns = {
   visible: (i: number) => ({
     opacity: 1,
