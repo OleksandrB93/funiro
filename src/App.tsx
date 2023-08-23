@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import MasonryList from "./components/MasonryList";
 import OurProduct from "./components/OurProduct";
 import Slider from "./components/Slider";
+import ToTop from "./components/ToTop";
 import {
   autoplay,
   explainsSliderBreackpoints,
@@ -57,19 +58,20 @@ function App() {
             explainsSliderBoll={true}
           />
         </section>
-          <Slider
-            effect={"slide"}
-            slides={tipsSlider}
-            title="Tips & Tricks"
-            breackpoints={tipsSliderBreackpoints}
-            autoplay={autoplay}
-            navigation={navigation}
-            arrowNavigation={true}
-            pagination={pagination}
-            tipsSliderBool={true}
-          />
-          <MasonryList masonryList={masonryList} />
+        <Slider
+          effect={"slide"}
+          slides={tipsSlider}
+          title="Tips & Tricks"
+          breackpoints={tipsSliderBreackpoints}
+          autoplay={autoplay}
+          navigation={navigation}
+          arrowNavigation={true}
+          pagination={pagination}
+          tipsSliderBool={true}
+        />
+        <MasonryList masonryList={masonryList} />
       </div>
+      <ToTop />
       <div className="bg-footerBg">
         <Footer />
       </div>
