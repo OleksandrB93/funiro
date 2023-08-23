@@ -3,6 +3,12 @@ import PhoneIcon from "./icons/PhoneIcon";
 import TelegaIcon from "./icons/TelegaIcon";
 
 const Footer = () => {
+  const handleLinkClick = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div className="flex justify-center mx-auto gap-x-[80px] max-w-[1440px] py-[50px] relative maxSm:flex-col maxSm:py-2">
       <div className="before:absolute before:w-full before:h-[1px] before:bg-gray5 before:top-0 before:left-0 before:right-0" />
@@ -45,24 +51,39 @@ const Footer = () => {
       <p className="text-[16px] text-gray2 hover:text-primary transition-all duration-300 maxSm:text-xs maxSm:text-center maxSm:block hidden">
         www.funiro.com
       </p>
-      <div className="maxSm:flex maxSm:justify-around flex gap-x-[80px]">
-        <div className="flex flex-col gap-y-4 maxSm:items-center">
+      <div className="maxSm:flex maxSm:justify-beetwen flex gap-x-[80px]">
+        <div className="flex flex-col items-start gap-y-4 maxSm:items-center">
           <h2 className="text-2xl text-black font-bold maxSm:text-sm">Menu</h2>
-          <a className=" text-[16px] text-gray2 hover:text-primary transition-all duration-300 maxSm:text-[10px]">
+          <button
+            type="button"
+            onClick={() => handleLinkClick("Products")}
+            className=" text-[16px] text-gray2 hover:text-primary transition-all duration-300 maxSm:text-[10px]"
+          >
             Products
-          </a>
-          <a className=" text-[16px] text-gray2 hover:text-primary transition-all duration-300 maxSm:text-[10px]">
+          </button>
+          <button
+            onClick={() => handleLinkClick("Rooms")}
+            className=" text-[16px] text-gray2 hover:text-primary transition-all duration-300 maxSm:text-[10px]"
+          >
             Rooms
-          </a>
-          <a className=" text-[16px] text-gray2 hover:text-primary transition-all duration-300 maxSm:text-[10px]">
+          </button>
+          <button
+            onClick={() => handleLinkClick("Inspirations")}
+            className=" text-[16px] text-gray2 hover:text-primary transition-all duration-300 maxSm:text-[10px]"
+          >
             Inspirations
-          </a>
-          <a className=" text-[16px] text-gray2 hover:text-primary transition-all duration-300 maxSm:text-[10px]">
+          </button>
+          <button
+            onClick={() => handleLinkClick("About Us")}
+            className=" text-[16px] text-gray2 hover:text-primary transition-all duration-300 maxSm:text-[10px]"
+          >
             About Us
-          </a>
-          <a className="text-[16px] text-gray2 hover:text-primary transition-all duration-300 maxSm:text-[10px]">
+          </button>
+          <button 
+          onClick={() => handleLinkClick("")}
+          className="text-[16px] text-gray2 hover:text-primary transition-all duration-300 maxSm:text-[10px]">
             Terms & Policy
-          </a>
+          </button>
         </div>
 
         <div className="flex flex-col gap-y-4 maxSm:items-center">

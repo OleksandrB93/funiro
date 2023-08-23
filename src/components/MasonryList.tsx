@@ -35,7 +35,7 @@ const MasonryList = ({ masonryList }: MasonryListProps) => {
             className="masonry-item flex justify-centetr items-center gap-4 m-auto 
                                    lg:hover:scale-105 hover:drop-shadow-xl transition duration-300"
           >
-            <img src={process.env.PUBLIC_URL + img} alt="photo"/>
+            <img src={process.env.PUBLIC_URL + img} alt="cart"/>
           </div>
         ))}
       </Masonry>

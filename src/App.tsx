@@ -37,10 +37,15 @@ function App() {
         pagination={pagination}
         heroSlides={true}
       />
-      <main className="bg-bgPrimary">
-        <Features features={features} />
+      <div className="bg-bgPrimary">
+        <section id="About Us">
+          <Features features={features} />
+        </section>
         <OurProduct ourProduct={ourProduct} />
-        <div className="maxSm:flex-col flex justify-center items-center mx-auto bg-gradientEnd max-w-[1440px]">
+        <section
+          id="Rooms"
+          className="maxSm:flex-col flex justify-center items-center mx-auto bg-gradientEnd max-w-[1440px]"
+        >
           <Explains />
           <Slider
             effect={"slide"}
@@ -53,23 +58,27 @@ function App() {
             pagination={pagination}
             explainsSliderBoll={true}
           />
-        </div>
-        <Slider
-          effect={"slide"}
-          slides={tipsSlider}
-          title="Tips & Tricks"
-          breackpoints={tipsSliderBreackpoints}
-          autoplay={autoplay}
-          navigation={navigation}
-          arrowNavigation={true}
-          pagination={pagination}
-          tipsSliderBool={true}
-        />
-        <MasonryList masonryList={masonryList} />
-      </main>
-      <footer className="bg-footerBg">
+        </section>
+        <section id="">
+          <Slider
+            effect={"slide"}
+            slides={tipsSlider}
+            title="Tips & Tricks"
+            breackpoints={tipsSliderBreackpoints}
+            autoplay={autoplay}
+            navigation={navigation}
+            arrowNavigation={true}
+            pagination={pagination}
+            tipsSliderBool={true}
+          />
+        </section>
+        <section id="Inspirations">
+          <MasonryList masonryList={masonryList} />
+        </section>
+      </div>
+      <div className="bg-footerBg">
         <Footer />
-      </footer>
+      </div>
     </>
   );
 }

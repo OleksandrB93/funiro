@@ -1,6 +1,12 @@
 import { NavlinksProps } from "../types";
 
 const Navlinks = ({ links }: NavlinksProps) => {
+  const handleLinkClick = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <ul
       className="flex justify-center items-center 
@@ -13,7 +19,9 @@ const Navlinks = ({ links }: NavlinksProps) => {
           gap-x-2"
           key={index}
         >
-          <button className="" type="button">{link.pathname}</button>
+          <button className="" type="button" onClick={() => handleLinkClick(link.id)}>
+            {link.pathname}
+          </button>
           {link.icon}
         </li>
       ))}

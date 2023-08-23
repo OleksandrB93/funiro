@@ -1,6 +1,7 @@
 export interface NavLink {
   pathname: string;
   icon?: any;
+  id:string;
 }
 
 export type NavlinksProps = {

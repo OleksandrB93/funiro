@@ -3,7 +3,7 @@ import OurProductsCard from "./OurProductCard";
 
 const OurProduct = ({ ourProduct }: OurProductProps) => {
   return (
-    <>
+    <section id="Products">
       <h2 className="text-center text-[40px] font-bold mb-8">Our Product</h2>
       <ul
         className=" grid grid-cols-4 gap-8 w-[1236px] mx-auto
@@ -19,7 +19,7 @@ const OurProduct = ({ ourProduct }: OurProductProps) => {
       >
         Show More
       </button>
-    </>
+    </section>
   );
 };
 
