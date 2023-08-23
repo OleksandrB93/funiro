@@ -1,12 +1,8 @@
+import { handleLinkClick } from "../helpers/scroll";
 import { NavlinksProps } from "../types";
 
 const Navlinks = ({ links }: NavlinksProps) => {
-  const handleLinkClick = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+
   return (
     <ul
       className="flex justify-center items-center 

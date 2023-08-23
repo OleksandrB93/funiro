@@ -1,14 +1,10 @@
+import { handleLinkClick } from "../helpers/scroll";
 import LoacalIcon from "./icons/LocalIcon";
 import PhoneIcon from "./icons/PhoneIcon";
 import TelegaIcon from "./icons/TelegaIcon";
 
 const Footer = () => {
-  const handleLinkClick = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+
   return (
     <div className="flex justify-center mx-auto gap-x-[80px] max-w-[1440px] py-[50px] relative maxSm:flex-col maxSm:py-2">
       <div className="before:absolute before:w-full before:h-[1px] before:bg-gray5 before:top-0 before:left-0 before:right-0" />

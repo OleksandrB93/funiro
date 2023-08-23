@@ -38,13 +38,11 @@ function App() {
         heroSlides={true}
       />
       <div className="bg-bgPrimary">
-        <section id="About Us">
-          <Features features={features} />
-        </section>
+        <Features features={features} />
         <OurProduct ourProduct={ourProduct} />
         <section
           id="Rooms"
-          className="maxSm:flex-col flex justify-center items-center mx-auto bg-gradientEnd max-w-[1440px]"
+          className="maxSm:flex-col flex justify-center items-center mx-auto bg-gradientEnd max-w-[1440px] scroll-mt-[50px] "
         >
           <Explains />
           <Slider
@@ -59,7 +57,6 @@ function App() {
             explainsSliderBoll={true}
           />
         </section>
-        <section id="">
           <Slider
             effect={"slide"}
             slides={tipsSlider}
@@ -71,10 +68,7 @@ function App() {
             pagination={pagination}
             tipsSliderBool={true}
           />
-        </section>
-        <section id="Inspirations">
           <MasonryList masonryList={masonryList} />
-        </section>
       </div>
       <div className="bg-footerBg">
         <Footer />

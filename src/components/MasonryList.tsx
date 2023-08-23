@@ -27,7 +27,7 @@ const MasonryList = ({ masonryList }: MasonryListProps) => {
     };
   }, []);
   return (
-    <div className="max-w-[1440px] m-auto pb-[87px] maxSm:pb-10">
+    <section id="Inspirations" className="max-w-[1440px] m-auto pb-[87px] maxSm:pb-10 scroll-mt-[50px] ">
       <Masonry columns={columns} gap={gap}>
         {masonryList.map(({ id, img }) => (
           <div
@@ -39,7 +39,7 @@ const MasonryList = ({ masonryList }: MasonryListProps) => {
           </div>
         ))}
       </Masonry>
-    </div>
+    </section>
   );
 };
 
