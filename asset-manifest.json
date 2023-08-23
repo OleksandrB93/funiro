@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/funiro/static/css/main.8d4af386.css",
-    "main.js": "/funiro/static/js/main.cf3d34b7.js",
+    "main.css": "/funiro/static/css/main.ef40da73.css",
+    "main.js": "/funiro/static/js/main.da2dd4a2.js",
     "static/js/787.e2ae17be.chunk.js": "/funiro/static/js/787.e2ae17be.chunk.js",
     "index.html": "/funiro/index.html",
-    "main.8d4af386.css.map": "/funiro/static/css/main.8d4af386.css.map",
-    "main.cf3d34b7.js.map": "/funiro/static/js/main.cf3d34b7.js.map",
+    "main.ef40da73.css.map": "/funiro/static/css/main.ef40da73.css.map",
+    "main.da2dd4a2.js.map": "/funiro/static/js/main.da2dd4a2.js.map",
     "787.e2ae17be.chunk.js.map": "/funiro/static/js/787.e2ae17be.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8d4af386.css",
-    "static/js/main.cf3d34b7.js"
+    "static/css/main.ef40da73.css",
+    "static/js/main.da2dd4a2.js"
   ]
 }
